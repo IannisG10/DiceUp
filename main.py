@@ -1,23 +1,29 @@
 import tkinter as tk
 import random
 
+def display_faces(canvas, nombre):
+    canvas.delete("All")
+    rayon = 5
 
-def lancer_de():
-    r = random.randint(1,6)
-    label.config(text=str(r))
+    # Declaration des positions des points du dé
+    positions = [
+        (50, 50),
+        (25, 25),
+        (75, 75),
+        (25, 75),
+        (75, 25),
+        (50, 25),
+        (50, 75)
+    ]
+
+    # Declaration d' un Dictionnaire pour stocker les positions d' une face
+    faces = {
+
+    }
 
 
+
+# creation de la fetenetre Tkinter
 window = tk.Tk()
 window.title("DiceUp")
-
-label = tk.Label(window,text="1",font=("Arial",20))
-label.pack(pady=10)
-
-button = tk.Button(window,text="Tourne le dé",command=lancer_de)
-button.pack(pady=30)
-
-window.mainloop()
-
-
-
-
+window.geometry("400x300")
